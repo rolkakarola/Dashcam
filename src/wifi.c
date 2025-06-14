@@ -4,6 +4,8 @@
 #include "esp_netif.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
+#include "esp_netif_ip_addr.h"
+#include "lwip/inet.h"  // for inet_pton
 
 static const char *TAG = "WIFI";
 static EventGroupHandle_t wifi_event_group;
@@ -28,8 +30,20 @@ void wifi_init() {
     
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
+
     esp_netif_t *sta_netif = esp_netif_create_default_wifi_sta();
     assert(sta_netif);
+
+    // 🔽 STATIC IP CONFIGURATION START
+    esp_netif_ip_info_t ip_info;
+    ip_info.ip.addr = ipaddr_addr("192.168.1.150");
+    ip_info.gw.addr = ipaddr_addr("192.168.1.1");
+    ip_info.netmask.addr = ipaddr_addr("255.255.255.0");
+
+    ESP_ERROR_CHECK(esp_netif_dhcpc_stop(sta_netif));         // Stop DHCP client
+    ESP_ERROR_CHECK(esp_netif_set_ip_info(sta_netif, &ip_info));
+    ESP_LOGI(TAG, "Static IP set: " IPSTR, IP2STR(&ip_info.ip));
+    // 🔼 STATIC IP CONFIGURATION END
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
@@ -50,6 +64,17 @@ void wifi_init() {
     ESP_ERROR_CHECK(esp_wifi_start());
 
     ESP_LOGI(TAG, "Waiting for WiFi connection...");
-    // In wifi.c, replace the last line:
-    xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE, 10000 / portTICK_PERIOD_MS); // 10s timeout
+    EventBits_t bits = xEventGroupWaitBits(wifi_event_group,
+        WIFI_CONNECTED_BIT,
+        pdFALSE,
+        pdTRUE,
+        pdMS_TO_TICKS(30000)  // wait up to 30 seconds
+    );
+
+    if ((bits & WIFI_CONNECTED_BIT) != 0) {
+        ESP_LOGI(TAG, "WiFi connected successfully");
+    } else {
+        ESP_LOGE(TAG, "Failed to connect to WiFi within timeout");
+    }
 }
+
