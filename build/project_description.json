@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_cam_http_stream",
-    "project_version":    "f8643a2-dirty",
+    "project_version":    "7a27b8c-dirty",
     "project_path":       "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server",
     "idf_path":           "/Users/karolinarola/esp/esp-idf",
     "build_dir":          "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build",
@@ -1255,7 +1255,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/main/libmain.a",
-            "sources": [ "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/main.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/connect_wifi.c" ],
+            "sources": [ "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/main.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/connect_wifi.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/web_server.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/camera_init.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
