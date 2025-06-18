@@ -161,9 +161,5 @@
 /Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/spiffs/libspiffs.a
 /Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/json/libjson.a
-/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/espressif__onewire_bus/libespressif__onewire_bus.a
-/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/espressif__ds18b20/libespressif__ds18b20.a
-/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/espressif__onewire_bus/libespressif__onewire_bus.a
 /Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/main/libmain.a
-/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/espressif__ds18b20/libespressif__ds18b20.a
 /Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/esp32-camera/libesp32-camera.a

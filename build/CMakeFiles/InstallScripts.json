@@ -121,8 +121,6 @@
 		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/ulp/cmake_install.cmake",
 		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/usb/cmake_install.cmake",
 		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/wifi_provisioning/cmake_install.cmake",
-		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/espressif__onewire_bus/cmake_install.cmake",
-		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/espressif__ds18b20/cmake_install.cmake",
 		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/main/cmake_install.cmake",
 		"/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/esp32-camera/cmake_install.cmake"
 	],
