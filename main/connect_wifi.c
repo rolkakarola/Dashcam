@@ -5,9 +5,10 @@ static const char *TAG = "Connect_WiFi";
 int s_retry_num = 0;
 
 
-#define WIFI_SSID "replace_with_your_ssid"
-#define WIFI_PASSWORD "replace_with_your_password"
+#define WIFI_SSID "T-Mobile_5G_HomeOffice_2.4GHz"
+#define WIFI_PASSWORD "rm33r05eap6j2p3k"
 #define MAXIMUM_RETRY 5
+
 /* FreeRTOS event group to signal when we are connected*/
 EventGroupHandle_t s_wifi_event_group;
 
@@ -22,9 +23,11 @@ static void event_handler(void *arg, esp_event_base_t event_base,
 {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START)
     {
+        // Scan Phase
         esp_wifi_connect();
     }
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
+    // WIFI_EVENT_STA_DISCONNECTED results in failure in esp_wifi_connect()
     {
         if (s_retry_num < MAXIMUM_RETRY)
         {
@@ -84,7 +87,7 @@ void connect_wifi(void)
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
         },
     };
-    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));  // acts as a WiFI client
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
 

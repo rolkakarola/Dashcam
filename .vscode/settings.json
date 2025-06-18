@@ -1,0 +1,7 @@
+{
+    "idf.espIdfPath": "/Users/karolinarola/esp/esp-idf",
+    "idf.toolsPath": "/Users/karolinarola/.espressif",
+    "idf.pythonInstallPath": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+    "idf.port": "/dev/tty.usbserial-1120",
+    "idf.flashType": "UART"
+}

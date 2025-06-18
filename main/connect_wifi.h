@@ -5,7 +5,8 @@
 #include <nvs_flash.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_wifi.h"
+
+#include "esp_wifi.h"   // provided by ESPIDF
 #include "esp_event.h"
 #include "freertos/event_groups.h"
 #include "esp_log.h"
