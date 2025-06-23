@@ -10,6 +10,8 @@
 #include "camera_pins.h"
 #include "web_server.h"
 #include "camera_init.h"
+#include "temp_sensor.h"
+
 
 
 static const char *TAG = "main";
@@ -43,5 +45,22 @@ void app_main(void)
     else
     {
         ESP_LOGI(TAG, "Failed to connect to Wi-Fi. Check credentials.");
+    }
+
+    if (init_temp_sensor() == ESP_OK)
+    {
+        float temp = get_temperature();
+        if (temp > -100)  // basic sanity check
+        {
+            ESP_LOGI(TAG, "Measured temperature: %.2f°C", temp);
+        }
+        else
+        {
+            ESP_LOGW(TAG, "Temperature sensor returned invalid value");
+        }
+    }
+    else
+    {
+        ESP_LOGE(TAG, "Temperature sensor init failed");
     }
 }

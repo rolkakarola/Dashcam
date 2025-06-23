@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_cam_http_stream",
-    "project_version":    "7a27b8c-dirty",
+    "project_version":    "203c564-dirty",
     "project_path":       "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server",
     "idf_path":           "/Users/karolinarola/esp/esp-idf",
     "build_dir":          "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build",
@@ -1255,8 +1255,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build/esp-idf/main/libmain.a",
-            "sources": [ "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/main.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/connect_wifi.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/web_server.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/camera_init.c" ],
-            "include_dirs": [ "." ]
+            "sources": [ "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/main.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/connect_wifi.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/camera_init.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/temp_sensor.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/owb/owb.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/owb/owb_rmt.c", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/ds18b20/ds18b20.c" ],
+            "include_dirs": [ ".", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/owb", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/ds18b20" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2953,7 +2953,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "." ]
+            "include_dirs": [ ".", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/owb", "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/main/ds18b20" ]
         },
         "esp32-camera": {
             "alias": "idf::esp32-camera",
