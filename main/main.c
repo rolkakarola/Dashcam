@@ -26,22 +26,17 @@ void app_main(void)
         ret = nvs_flash_init();
     }
 
-    connect_wifi();
+    connect_wifi();  // this sets up ESP32 as AP
 
-    if (wifi_connect_status)
-    {
-        err = init_camera();
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG, "Camera init failed: %s", esp_err_to_name(err));
-            return;
-        }
+    // No need to check wifi_connect_status — AP always starts unless there's an error
+    ESP_LOGI(TAG, "Wi-Fi AP is running. You can now connect to ESP32-CAM.");
 
-        setup_server();
-        ESP_LOGI(TAG, "ESP32 CAM Web Server is up and running");
+    err = init_camera();
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Camera init failed: %s", esp_err_to_name(err));
+        return;
     }
-    else
-    {
-        ESP_LOGI(TAG, "Failed to connect to Wi-Fi. Check credentials.");
-    }
+
+    setup_server();
+    ESP_LOGI(TAG, "ESP32 CAM Web Server is up and running");
 }
