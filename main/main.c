@@ -6,6 +6,7 @@
 #include "esp_log.h"
 #include "esp_camera.h"
 
+
 #include "connect_wifi.h"
 #include "camera_pins.h"
 #include "web_server.h"

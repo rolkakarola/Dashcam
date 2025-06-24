@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_cam_http_stream",
-    "project_version":    "203c564-dirty",
+    "project_version":    "d121862-dirty",
     "project_path":       "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server",
     "idf_path":           "/Users/karolinarola/esp/esp-idf",
     "build_dir":          "/Users/karolinarola/Documents/EspIDF/ESP32-CAM-ESP-IDF-Live-Streaming-Web-Server/build",
