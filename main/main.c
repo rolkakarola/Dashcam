@@ -26,6 +26,7 @@ void app_main(void)
         ret = nvs_flash_init();
     }
 
+
     // wifi initialization
     if (connect_wifi() == ESP_OK) {
         ESP_LOGI(TAG, "\nWiFi AP running | SSID: %s\n", AP_WIFI_SSID );
@@ -34,6 +35,7 @@ void app_main(void)
         // Handle error (e.g., reboot)
     }
 
+
     // camera initialization
     err = init_camera();
     if (err != ESP_OK) {
@@ -41,6 +43,7 @@ void app_main(void)
         return;
     }
 
+    
     // server initialization
     setup_server();
     ESP_LOGI(TAG, "ESP32 CAM Web Server is up and running");

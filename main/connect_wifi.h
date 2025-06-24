@@ -18,10 +18,11 @@
 #include <lwip/api.h>
 #include <lwip/netdb.h>
 
-
+#define AP_WIFI_SSID "ESP32-CAM-AP"
+#define AP_WIFI_PASSWORD "esp123"
 
 extern int wifi_connect_status;
 
-void connect_wifi(void);
+esp_err_t connect_wifi();
 
 #endif
