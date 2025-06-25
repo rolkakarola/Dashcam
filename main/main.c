@@ -43,7 +43,6 @@ void app_main(void)
         return;
     }
 
-    
     // server initialization
     setup_server();
     ESP_LOGI(TAG, "ESP32 CAM Web Server is up and running");
